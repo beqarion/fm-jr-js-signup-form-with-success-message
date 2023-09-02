@@ -7,6 +7,10 @@ const input = document.querySelector("#my-form input")
 
 const btnSuccess = document.getElementById("btn-success")
 
+const domEmail = document.getElementById("my-email")
+const defaultText = domEmail.innerText
+let email = ""
+
 form.addEventListener("submit", function (e) {
   e.preventDefault()
   if (!validEmail(input.value)) {
@@ -14,8 +18,8 @@ form.addEventListener("submit", function (e) {
     return
   }
   form.classList.remove("error-class")
+  openSuccess(input.value)
   input.value = ""
-  openSuccess()
 })
 
 btnSuccess.addEventListener("click", () => {
@@ -28,13 +32,15 @@ input.addEventListener("keyup", validationStyle)
 // Helper functions
 // ================
 
-function openSuccess() {
+function openSuccess(emailTxt) {
   mainPage.style.zIndex = -1
   successPage.style.display = "block"
+  domEmail.innerText = emailTxt
 }
 function closeSuccess() {
   mainPage.style.zIndex = "inherit"
   successPage.style.display = "none"
+  domEmail.innerText = defaultText
 }
 
 function validEmail(value) {
