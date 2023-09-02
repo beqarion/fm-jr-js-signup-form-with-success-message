@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+=======
+Fonts
+=======
+*/
+
+/* Roboto Bold */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Roboto Regular */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (min-width: 1024px) {
+  #btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+    border-radius: 8px;
+  }
+  #btn:hover::before {
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+    opacity: 1;
+  }
+  #btn-success::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+    border-radius: 8px;
+  }
+  #btn-success:hover::before {
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+    opacity: 1;
+  }
+}
+
+/* error class */
+.error-class input {
+  @apply bg-primary-light-tomato border-primary-tomato text-primary-tomato outline-primary-tomato outline-2;
+}
+.error-class #error-msg {
+  display: block;
+}

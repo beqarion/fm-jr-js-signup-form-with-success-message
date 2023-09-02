@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/tailwind.css"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body class="font-roboto">
+    <main
+      class="relative min-h-screen lg:bg-neutral-charcoalGrey lg:grid lg:place-items-center"
+    >
+      <section
+        id="main-page"
+        class="lg:max-w-[928px] lg:mx-auto bg-neutral-white lg:p-6 lg:rounded-[36px] lg:grid lg:grid-cols-[54.55%_45.45%] relative"
+      >
+        <!-- image -->
+        <picture class="order-2">
+          <source
+            media="(min-width:1024px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            class="w-full"
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+          />
+        </picture>
+        <!-- article -->
+        <article
+          class="px-6 py-10 md:px-10 md:py-[74px] text-neutral-darkSlateGrey space-y-10"
+        >
+          <div class="space-y-6">
+            <!-- header -->
+            <h1 class="text-[40px] font-bold leading-10">Stay updated!</h1>
+            <!-- subheader -->
+            <p class="">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <!-- list -->
+            <ul class="space-y-[10px]">
+              <li class="flex gap-4">
+                <span class="shrink-0"
+                  ><img
+                    src="./assets/images/icon-list.svg"
+                    alt=""
+                /></span>
+                Product discovery and building what matters
+              </li>
+              <li class="flex gap-4">
+                <span class="shrink-0"
+                  ><img
+                    src="./assets/images/icon-list.svg"
+                    alt=""
+                /></span>
+                Measuring to ensure updates are a success
+              </li>
+              <li class="flex gap-4">
+                <span class="shrink-0"
+                  ><img
+                    src="./assets/images/icon-list.svg"
+                    alt=""
+                /></span>
+                And much more!
+              </li>
+            </ul>
+          </div>
+          <!-- form -->
+          <form
+            novalidate
+            id="my-form"
+            action=""
+            class="space-y-6"
+          >
+            <!-- input container -->
+            <div class="space-y-2">
+              <!-- label & err msg container -->
+              <div class="flex justify-between">
+                <label
+                  class="text-xs leading-[18px] font-bold"
+                  for="email"
+                  >Email address</label
+                >
+                <p
+                  id="error-msg"
+                  class="hidden text-xs leading-[18px] font-bold text-primary-tomato"
+                >
+                  Valid email required
+                </p>
+              </div>
+              <input
+                class="h-14 px-6 w-full rounded-[8px] border-[1px] border-neutral-grey text-base placeholder:text-neutral-grey outline-neutral-darkSlateGrey outline-1"
+                id="email"
+                type="email"
+                placeholder="email@company.com"
+              />
+            </div>
+            <!-- submit -->
+            <button
+              id="btn"
+              class="bg-neutral-darkSlateGrey text-neutral-white h-14 px-6 w-full rounded-[8px] font-bold transition relative z-0"
+              type="submit"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </article>
+      </section>
+      <!-- success message -->
+      <section
+        id="success-page"
+        class="hidden absolute inset-0 z-10 bg-neutral-white px-6 pt-[149px] pb-10 text-neutral-darkSlateGrey lg:inset-auto lg:w-[504px] lg:h-[520px] lg:rounded-[36px] lg:px-16 lg:pt-12 lg:pb-16"
+      >
+        <article class="flex flex-col justify-between h-full">
+          <div>
+            <div>
+              <img
+                src="./assets/images/icon-success.svg"
+                alt=""
+              />
+            </div>
+            <h1 class="mt-10 text-[40px] leading-10 font-bold">
+              Thanks for subscribing!
+            </h1>
+            <p class="mt-6">
+              A confirmation email has been sent to
+              <span class="font-bold">ash@loremcompany.com</span>. Please open
+              it and click the button inside to confirm your subscription.
+            </p>
+          </div>
+          <button
+            id="btn-success"
+            class="bg-neutral-darkSlateGrey text-neutral-white h-14 px-6 w-full rounded-[8px] font-bold transition relative z-0"
+            type="button"
+          >
+            Dismiss message
+          </button>
+        </article>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="./js/main.js"
+    ></script>
+  </body>
+</html>
